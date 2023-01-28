@@ -5,8 +5,12 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.DoubleSol;
+import frc.robot.Robot;
 
 public class DoubleIntake extends CommandBase {
+  private final DoubleSol doubleSol = new DoubleSol();
+
   /** Creates a new DoubleIntake. */
   public DoubleIntake() {
     // Use addRequirements() here to declare subsystem dependencies.
@@ -14,11 +18,18 @@ public class DoubleIntake extends CommandBase {
 
   // Called when the command is initially scheduled.
   @Override
-  public void initialize() {}
+  public void initialize() {
+    Robot.doubleSol.Intake();
+    
+  }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
-  public void execute() {}
+  public void execute() {
+
+
+    
+  }
 
   // Called once the command ends or is interrupted.
   @Override
@@ -27,6 +38,6 @@ public class DoubleIntake extends CommandBase {
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    return false;
+    return true;
   }
 }
